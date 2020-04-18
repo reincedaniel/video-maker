@@ -1,0 +1,19 @@
+{
+  "name": "video-maker",
+  "version": "1.0.0",
+  "description": "Robôs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reincedaniel/video-maker.git"
+  },
+  "author": "Lourenço Daniel Sebastião Carlos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reincedaniel/video-maker/issues"
+  },
+  "homepage": "https://github.com/reincedaniel/video-maker#readme"
+}
