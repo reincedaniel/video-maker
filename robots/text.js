@@ -14,13 +14,19 @@ const nlu = new NaturalLanguageUnderstandingV1({
   url: watsonApiKey.url
 });
 
+const state = require('./state.js')
 
-async function robot(content) {
+async function robot() {
+
+    const content = state.load()
+
     await fetchContentFromWikipedia(content)
     sanitizeContent(content)
     breakContentIntoSentences(content)
     limitMaximumSentences(content)
     await fetchKeywordsOfAllSentences(content)
+
+    state.save(content)
 
     async function fetchContentFromWikipedia(content) {
         const algorithmiaAuthenticated = algorithmia(algorithmiaApiKey.apiKey)
